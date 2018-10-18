@@ -17,9 +17,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	KEYMAP(
 	    KC_TAB, KC_UP,  KC_BSPC,
 	    KC_LEFT,KC_NO,  KC_RIGHT,
-	    KC_NO,  KC_DOWN,KC_ENT,
-	    KC_NO,  TO(1),  TO(0)  )
+	    TO(3),  KC_DOWN,KC_ENT,
+	    KC_NO,  TO(1),  TO(0)  ),
 		
+    KEYMAP(
+        KC_WH_D,    LSFT(KC_WH_U),  KC_WH_U,
+        LCTL(KC_WH_U),  KC_NO,   LCTL(KC_WH_D),
+        KC_MS_BTN1, LSFT(KC_WH_D), KC_MS_BTN2,
+        MO(2),         TO(2),       KC_NO )
 };
 
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
